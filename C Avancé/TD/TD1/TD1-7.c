@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Jeux des batônnets de Fort Boyard
+
 int main() {
     int j1 = 1, j2 = 0, retire = 0, i, restants = 10;
     while( restants>0 ) {

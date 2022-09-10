@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Fonction determinant si n est une puissance de 2
+
 int main() {
     int n;
     scanf("%d",&n);

@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Fonction permettant de permuter deux variables
+
 int main() {
     int num1, num2;
     scanf("%d%d", &num1, &num2);
