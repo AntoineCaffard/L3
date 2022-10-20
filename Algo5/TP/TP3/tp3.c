@@ -4,7 +4,6 @@
 
 // Word = 25 caracters (english alphabet)
 
-//TODO word on open fonction
 
 unsigned char isLowercase( char c) {
     if ( c <= 'z' && c >= 'a' ) return 1;
@@ -27,6 +26,17 @@ unsigned char convertLowerUpper( char c ){
     return c + 'A' - 'a';
 }
 
+FILE* open(char* name){
+    FILE * file = fopen(name,"r");
+    if(!file){
+        printf("No memory allocated\n");
+        return NULL;
+    } else {
+        printf("File opened\n");
+        return file;
+    }
+}
+
 void readWord(FILE * file){
     char c;
     while ((c = fgetc(file)) != EOF)
@@ -37,11 +47,9 @@ void readWord(FILE * file){
 
 
 int main ( void ){
-    FILE* file = NULL;
+    FILE* file = open("texte1.txt");
     char input;
     printf("%s",&input);
-    file = fopen("texte1.txt","r");
-    if (file) printf("Yes");
     readWord(file);
     fclose(file);
     return 0;
